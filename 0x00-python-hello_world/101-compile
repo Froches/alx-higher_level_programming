@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pyfile="$PYFILE"
+pycfile="${pyfile}c"
+
+python3 -m compileall "$pyfile"
