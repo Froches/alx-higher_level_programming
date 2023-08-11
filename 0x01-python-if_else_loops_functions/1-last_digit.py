@@ -7,4 +7,5 @@ if last_digit > 5:
 if last_digit == 0:
     print(F"Last digit of {number} is {last_digit} and is 0")
 if last_digit < 6 and last_digit != 0:
-    print(F"Last digit of {number} is {last_digit} and is less than 6 and not 0")
+    print(F"Last digit of {number} is {last_digit}\
+            and is less than 6 and not 0")
