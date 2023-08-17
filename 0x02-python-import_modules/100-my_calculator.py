@@ -27,4 +27,4 @@ if __name__ == "__main__":
             sys.exit(1)
             result = a / b
 
-print(f"{a} {operator} {b} = {result}")
+print("{} {} {} = {}".format(a, operator, b, result))
