@@ -23,8 +23,8 @@ if __name__ == "__main__":
         result = a - b
     else:
          if b == 0:
-            print("Error: Division by zero is not allowed.")
-            sys.exit(1)
-            result = a / b
+             print("Error: Division by zero is not allowed.")
+             sys.exit(1)
+             result = a / b
 
-print("{} {} {} = {}".format(a, operator, b, result))
+             print("{} {} {} = {}".format(a, operator, b, result))
