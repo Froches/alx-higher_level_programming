@@ -3,8 +3,6 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
 
-    result = 0
-
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
@@ -27,6 +25,6 @@ if __name__ == "__main__":
          if b == 0:
             print("Error: Division by zero is not allowed.")
             sys.exit(1)
-        result = a / b
+            result = a / b
 
 print("{} {} {} = {}".format(a, operator, b, result))
