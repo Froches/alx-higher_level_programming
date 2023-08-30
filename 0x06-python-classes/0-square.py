@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
-# An empty class
+"""
+    Square: empty class
+    No parameters
+
+"""
 
 class Square:
     pass
