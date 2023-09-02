@@ -1,1 +1,1 @@
-my pytgon exceptions readme
+my python exceptions readme file
