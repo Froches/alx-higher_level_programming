@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def magic_calculation(a, b):
     result = 0
     for i in range(1, 3):
@@ -11,5 +10,4 @@ def magic_calculation(a, b):
         except Exception:
             result = b + a
             break
-
         return result
