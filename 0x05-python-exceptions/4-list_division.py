@@ -11,7 +11,7 @@ def list_division(my_list_1, my_list_2, list_length):
                 print("wrong type")
                 new_list.append(0)
             elif elem2 == 0:
-                print("division by 0")
+                print("out of range")
                 new_list.append(0)
             else:
                 new_list.append(elem1 / elem2)
