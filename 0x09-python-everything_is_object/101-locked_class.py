@@ -11,12 +11,14 @@ class LockedClass:
         None
 
     Methods:
-        __setattr__(self, name, value): Sets instance attributes if 'name' is 'first_name'.
-                                    Raises an AttributeError for any other attribute.
+        __setattr__(self, name, value): Sets instance
+        attributes if 'name' is 'first_name'.
+        Raises an AttributeError for any other attribute.
     """
     def __setattr__(self, name, value):
         """
-        Set an instance attribute if 'name' is 'first_name', otherwise raise an error
+        Set an instance attribute if 'name'
+        is 'first_name', otherwise raise an error
 
         Args:
             name (str): The name of the attribute being set.
@@ -31,4 +33,5 @@ class LockedClass:
         if name == "first_name":
             self.__dict__[name] = value
         else:
-            raise AttributeError("'LockedClass' object has no attribute '{}'".format(name))
+            raise AttributeError
+                    ("'LockedClass' object has no attribute '{}'".format(name))
