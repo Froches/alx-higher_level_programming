@@ -14,7 +14,7 @@ class Square:
         """
         self.__size = size
 
-        nat = isinstance(size, (float, int))
+        nat = isinstance(size, int)
         if nat is not True:
             raise TypeError("size must be an integer")
         if size < 0:
