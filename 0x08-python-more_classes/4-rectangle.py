@@ -57,7 +57,6 @@ class Rectangle:
                 rec_str += '#' * self.__width + "\n"
             return rec_str.rstrip()
 
-
     def __repr__(self):
         val = f"Rectangle({self.__width}, {self.__height})"
         return val
