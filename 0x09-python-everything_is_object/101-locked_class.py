@@ -4,38 +4,11 @@
 
 class LockedClass:
     """
-    A class that restricts the creation of new instance attributes,
-    allowing only 'first_name' to be set.
-
-    Attributes:
-        None
-
-    Methods:
-        __setattr__(self, name, value): Sets instance
-        attributes if 'name' is 'first_name'.
-        Raises an AttributeError for any other attribute.
+    Class with no class or object attribute, that prevents the user
+    from dynamically creating attributes except if the new attribute is
+    called 'first_name'
     """
-    def __setattr__(self, name, value):
-        """
-        Set an instance attribute if 'name'
-        is 'first_name', otherwise raise an error
+    __slots__ = ["first_name"]
 
-        Args:
-            name (str): The name of the attribute being set.
-            value (any): The value to assign to the attribute
-
-        Raises:
-            AttributeError: If 'name' is not 'first_name'.
-
-        Returns:
-            None
-        """
-        if name == 'first_name':
-            super().__setattr__(name, value)
-        else:
-            if name == '__dict__':
-                err_msg = "'LockedClass' object has to attribute '__dict__'"
-                raise AttributeError(err_msg)
-            else:
-                error_msg = f"'LockedClass' object has no attribute '{name}'"
-                raise AttributeError(error_msg)
+    def __init__(self):
+        self.first_name = None
