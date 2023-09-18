@@ -30,8 +30,8 @@ class LockedClass:
         Returns:
             None
         """
-        if name == "first_name":
-            self.__dict__[name] = value
+        if name == 'first_name':
+            super().__setattr__(name, value)
         else:
-            raise AttributeError
-                    ("'LockedClass' object has no attribute '{}'".format(name))
+            error_msg = f"'LockedClass' object has no attribute '{name}'"
+            raise AttributeError(error_msg)
