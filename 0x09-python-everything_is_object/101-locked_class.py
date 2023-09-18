@@ -33,5 +33,9 @@ class LockedClass:
         if name == 'first_name':
             super().__setattr__(name, value)
         else:
-            error_msg = f"'LockedClass' object has no attribute '{name}'"
-            raise AttributeError(error_msg)
+            if name == '__dict__':
+                err_msg = "'LockedClass' object has to attribute '__dict__'"
+                raise AttributeError(err_msg)
+            else:
+                error_msg = f"'LockedClass' object has no attribute '{name}'"
+                raise AttributeError(error_msg)
