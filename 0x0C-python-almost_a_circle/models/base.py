@@ -3,6 +3,11 @@
 
 
 class Base:
+    """
+    Represents a class Base which will act as a base class for
+    other subclasses
+    """
+
     __nb_objects = 0    # Private class attribute
 
     def __init__(self, id=None):
