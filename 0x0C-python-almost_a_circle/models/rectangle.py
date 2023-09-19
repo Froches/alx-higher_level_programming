@@ -2,6 +2,7 @@
 """Creating a crectangle class that inherits from base"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     A rectangle class that inherits from the Base class
@@ -17,6 +18,7 @@ class Rectangle(Base):
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, value):
         if value <= 0:
