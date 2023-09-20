@@ -49,6 +49,15 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(actual_output, expected_output)
 
+    def test_display_with_x_y(self):
+        rect = Rectangle(3, 2, 2, 3, 100)
+        expected_output = "\n\n\n  ###\n  ###\n"
+
+        rect.display()
+        actual_output = sys.stdout.getvalue()
+
+        self.assertEqual(actual_output, expected_output)
+
     def test_str_method(self):
         rect = Rectangle(3, 2, 1, 1, 100)
         expected_output = "[Rectangle] (100) 1/1 - 3/2"
