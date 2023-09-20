@@ -80,8 +80,15 @@ class Rectangle(Base):
                                                        self.x, self.y,
                                                        self.width, self.height)
 
-    def update(self, *args):
-        """Assigns an argument to each attribute"""
+    def update(self, *args, **kwargs):
+        """
+        Update #0:
+        Assigns an argument to each attribute using *args
+
+        Update #1:
+        Changing prototype to add **kwargs that assignes a keyword arg
+        to values
+        """
         if args:
             if len(args) >= 1:
                 self.id = args[0]
@@ -93,3 +100,18 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
+                else:
+                    msg = f"'{type(self).__name__}' has no attr '{key}'"
+                    raise TypeError(msg)

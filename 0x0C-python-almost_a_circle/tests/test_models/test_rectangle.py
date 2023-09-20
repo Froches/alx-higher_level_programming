@@ -66,10 +66,21 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(actual_output, expected_output)
 
-    def test_update(self):
+    def test_update_with_args(self):
         rect = Rectangle(3, 2, 1, 1, 100)
 
         rect.update(200, 5, 6, 2, 3)
+
+        self.assertEqual(rect.id, 200)
+        self.assertEqual(rect.width, 5)
+        self.assertEqual(rect.height, 6)
+        self.assertEqual(rect.x, 2)
+        self.assertEqual(rect.y, 3)
+
+    def test_update_with_kwargs(self):
+        rect = Rectangle(3, 2, 1, 1, 100)
+
+        rect.update(id=200, width=5, height=6, x=2, y=3)
 
         self.assertEqual(rect.id, 200)
         self.assertEqual(rect.width, 5)
