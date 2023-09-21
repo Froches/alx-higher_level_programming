@@ -44,6 +44,7 @@ class Square(Rectangle):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
+        """Dictionary method for square class"""
         return {
                 'id': self.id,
                 'size': self.size,
