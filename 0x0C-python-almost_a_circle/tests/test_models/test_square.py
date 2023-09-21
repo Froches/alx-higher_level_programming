@@ -60,5 +60,16 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.x, 2)
         self.assertEqual(square.y, 2)
 
+    def test_to_dictionary(self):
+        square = Square(2, 1, 1, 1)
+        square_dict = square.to_dictionary()
+
+        self.assertEqual(square_dict, {
+            'id': 1,
+            'size': 2,
+            'x': 1,
+            'y': 1
+            })
+
 if __name__ == '__main__':
     unittest.main()
