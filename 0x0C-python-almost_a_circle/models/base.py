@@ -4,6 +4,7 @@
 
 import json
 
+
 class Base:
     """
     Represents a class Base which will act as a base class for
