@@ -88,5 +88,17 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.x, 2)
         self.assertEqual(rect.y, 3)
 
+    def test_to_dictionary(self):
+        rect = Rectangle(5, 10, 2, 3, 42)
+        rect_dict = rect.to_dictionary()
+
+        self.assertEqual(rect_dict, {
+            'id': 42,
+            'width': 5,
+            'height': 10,
+            'x': 2,
+            'y': 3
+            })
+
 if __name__ == '__main__':
     unittest.main()

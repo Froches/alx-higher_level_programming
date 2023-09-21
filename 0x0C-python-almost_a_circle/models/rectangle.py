@@ -115,3 +115,12 @@ class Rectangle(Base):
                 else:
                     msg = f"'{type(self).__name__}' has no attr '{key}'"
                     raise TypeError(msg)
+
+    def to_dictionary(self):
+        return {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y,
+                }
