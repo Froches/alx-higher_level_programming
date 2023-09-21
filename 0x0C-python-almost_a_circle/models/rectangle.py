@@ -117,6 +117,7 @@ class Rectangle(Base):
                     raise TypeError(msg)
 
     def to_dictionary(self):
+        """Implementing the dictionary method of the rectangle class"""
         return {
                 'id': self.id,
                 'width': self.width,
