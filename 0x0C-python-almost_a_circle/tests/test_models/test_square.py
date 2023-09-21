@@ -3,9 +3,20 @@
 
 
 import unittest
+from io import StringIO
+import sys
 from models.square import Square
 
 class TestSquare(unittest.TestCase):
+    """Tests a square class"""
+
+    def setUp(self):
+        self.saved_stdout = sys.stdout
+        sys.stdout = StringIO()
+
+    def tearDown(self):
+        sys.stdout = self.saved_stdout
+
     def test_valid_constructor(self):
         square = Square(5)
         self.assertEqual(square.width, 5)
@@ -31,7 +42,7 @@ class TestSquare(unittest.TestCase):
         square = Square(6, 2, 3, 42)
         self.assertEqual(str(square), "[Square] (42) 2/3 - 6")
 
-    def test_update_method(self):
+    def test_update_method_args(self):
         square = Square(2, 1, 1, 1)
 
         square.update(5, 3, 3, 3)
@@ -40,6 +51,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.x, 3)
         self.assertEqual(square.y, 3)
 
+    def test_update_method_kwargs(self):
+        square = Square(2, 1, 1, 1)
+
         square.update(id=10, size=4, x=2, y=2)
         self.assertEqual(square.id, 10)
         self.assertEqual(square.size, 4)
@@ -47,4 +61,4 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.y, 2)
 
 if __name__ == '__main__':
-    unittest.main()'
+    unittest.main()
