@@ -1,25 +1,5 @@
 import unittest
-from my_list import MyList  # Import the MyList class from your implementation
-
-class TestMyList(unittest.TestCase):
-
-    def test_print_sorted(self):
-        # Create an instance of MyList
-        my_list = MyList()
-        
-        # Add unsorted integers to the list
-        my_list.append(1)
-        my_list.append(4)
-        my_list.append(2)
-        my_list.append(3)
-        my_list.append(5)
-
-        # Call print_sorted to sort the list
-        my_list.print_sorted()
-
-        # Check if the list is sorted
-        self.assertEqual(my_list, [1, 2, 3, 4, 5])
-
-if __name__ == '__main__':
-    unittest.main()
-
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList([3, 1, 2])
+>>> my_list.print_sorted()
+[1, 2, 3]
