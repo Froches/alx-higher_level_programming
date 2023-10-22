@@ -1,6 +1,4 @@
 -- Lists the number of records with same score in the table
-USE hbtn_0c_0;
-
 CREATE TEMPORARY TABLE IF NOT EXISTS temp_count AS
 SELECT score, COUNT(*) AS number
 FROM second_table
