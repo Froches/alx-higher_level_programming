@@ -69,6 +69,22 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 >>> my_list.print_sorted()
 [1, 2, 3, 5, 6]
 
-
 >>> print(my_list)
 [2, 3, 1, 5, 6]
+
+>>> print(my_list)
+[]
+>>> print(my_list.print_sorted())
+[]
+None
+>>> print(my_list.print_sorted)
+<bound method MyList.print_sorted of []>
+
+print(my_list)
+[8, 2, 3, 5, -6]
+>>> print(my_list.print_sorted)
+<bound method MyList.print_sorted of [8, 2, 3, 5, -6]>
+>>> print(my_list.print_sorted())
+[-6, 2, 3, 5, 8]
+None
+
