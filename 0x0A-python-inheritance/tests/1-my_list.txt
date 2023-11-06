@@ -72,6 +72,25 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 >>> print(my_list)
 [2, 3, 1, 5, 6]
 
+>>> my_list.remove(1)
+>>> my_list.remove(6)
+>>> my_list.append(-6)
+>>> my_list.append(8)
+
+>>> print(my_list)
+[2, 3, 5, -6, 8]
+>>> print(my_list.print_sorted)
+<bound method MyList.print_sorted of [2, 3, 5, -6, 8]>
+>>> print(my_list.print_sorted())
+[-6, 2, 3, 5, 8]
+None
+
+>>> my_list.remove(-6)
+>>> my_list.remove(2)
+>>> my_list.remove(3)
+>>> my_list.remove(5)
+>>> my_list.remove(8)
+
 >>> print(my_list)
 []
 >>> print(my_list.print_sorted())
@@ -79,12 +98,3 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 None
 >>> print(my_list.print_sorted)
 <bound method MyList.print_sorted of []>
-
-print(my_list)
-[8, 2, 3, 5, -6]
->>> print(my_list.print_sorted)
-<bound method MyList.print_sorted of [8, 2, 3, 5, -6]>
->>> print(my_list.print_sorted())
-[-6, 2, 3, 5, 8]
-None
-
