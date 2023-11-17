@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 import unittest
-from 0-add_integer import add_integer
+from add_integer import add_integer
 
-class Test_add(unittest.TestCase):
+class TestAddInteger(unittest.TestCase):
 
-	def test_add_integer(self):
-		result = add_integer(3, 7)
-		expected = 5
-		self.assertEqual(result, expected)
+	def test_add_ints(self):
+            self.assertEqual(add_integer(3, 7), 10)
+            self.assertEqual(add_integer(2, 3), 5)
+            self.assertEqual(add_integer(15, 200), 215)
 
-if __name__ = '__main__':
+        def test_add_str(self):
+            with self.assertRaises(TypeError):
+                add_integer("a", 5)
+
+if __name__ =='__main__':
     unittest.main()
