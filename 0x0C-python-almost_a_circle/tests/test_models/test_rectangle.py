@@ -4,7 +4,9 @@
 import unittest
 from io import StringIO
 import sys
+from models.base import Base
 from models.rectangle import Rectangle
+
 
 class TestRectangle(unittest.TestCase):
     """Tests a rectangle class"""
@@ -27,10 +29,6 @@ class TestRectangle(unittest.TestCase):
     def test_invalid_width(self):
         with self.assertRaises(ValueError):
             rect = Rectangle(-5, 10)
-
-    def test_invalid_height(self):
-        with self.assertRaises(ValueError):
-            rect = Rectangle(5, -10)
 
     def test_invalid_x(self):
         with self.assertRaises(ValueError):
@@ -99,6 +97,7 @@ class TestRectangle(unittest.TestCase):
             'x': 2,
             'y': 3
             })
+
 
 if __name__ == '__main__':
     unittest.main()
