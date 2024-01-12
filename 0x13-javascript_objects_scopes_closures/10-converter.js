@@ -1,16 +1,11 @@
 #!/usr/bin/node
 exports.converter = function (base) {
-  const numberToConvert = arguments[1];
-  if (typeof numberToConvert !== 'number' || isNaN(numberToConvert)) {
+  if (typeof arguments[1] !== 'number' || isNaN(arguments[1])) {
     throw new Error('Invalid input. Please provide a valid number.');
   }
 
-  const convertRecursive = (number, base) => {
-    if (number === 0) {
-      return '';
-    } else {
-      return convertRecursive(Math.floor(number / base), base) + (number % base);
-    }
-  };
-  return convertRecursive(numberToConvert, base);
+  const convertRecursive = (number, base) =>
+    number === 0 ? '' : convertRecursive(Math.floor(number / base), base) + (number % base);
+
+  return convertRecursive(arguments[1], base);
 };
